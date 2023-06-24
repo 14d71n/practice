@@ -358,10 +358,16 @@ function addTimer(func) {
 
 let fibonachchiTimer = addTimer(findingFibonachchi);
 
-console.log(fibonachchiTimer(42));
+console.log(fibonachchiTimer(4));
 
 let fibonachchiCacheTimer = addTimer(cachingFibonachchi);
 
-console.log(fibonachchiCacheTimer(42));
-console.log(fibonachchiCacheTimer(42));
-console.log(fibonachchiCacheTimer(43));
+console.log(fibonachchiCacheTimer(4));
+console.log(fibonachchiCacheTimer(4));
+console.log(fibonachchiCacheTimer(4));
+
+///////////scheduller & setTimeout
+
+setTimeout(() => {console.log(`Timeout 400ms:${findingFibonachchi(30)}`)}, 400);
+
+setInterval(() => {console.log(findingFibonachchi(4))}, 100);
